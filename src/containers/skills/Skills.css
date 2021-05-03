@@ -11,9 +11,16 @@
   margin-bottom: 30px;
 }
 
+.skills-image-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .skills-image-div > img {
   max-width: 100%;
   height: auto;
+  border-radius: 30px;
 }
 
 .skills-heading {

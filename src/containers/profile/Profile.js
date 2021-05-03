@@ -1,6 +1,6 @@
-import React, {useState, useEffect, lazy, Suspense} from "react";
-import ApolloClient, {gql} from "apollo-boost";
-import {openSource} from "../../portfolio";
+import React, { useState, useEffect, lazy, Suspense } from "react";
+import ApolloClient, { gql } from "apollo-boost";
+import { openSource } from "../../portfolio";
 import Contact from "../contact/Contact";
 import Loading from "../loading/Loading";
 
@@ -13,7 +13,9 @@ export default function Profile() {
   function setProfileFunction(array) {
     setrepo(array);
   }
-  function getProfileData() {
+
+
+  const getProfileData = () => {
     const client = new ApolloClient({
       uri: "https://api.github.com/graphql",
       request: operation => {
