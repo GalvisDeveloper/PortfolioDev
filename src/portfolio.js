@@ -163,7 +163,7 @@ const workExperiences = {
       role: "Front End Developer",
       company: "iGerencia",
       companylogo: iGerenciaLogo,
-      date: "November 2020 – Present",
+      date: "November 2020 – January 2021",
       // desc:
       //   "Changing lives of developers one line of code at a time.",
       descBullets: [
