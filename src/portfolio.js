@@ -1,5 +1,5 @@
 ﻿// Change this file to get your personal Portfolio
-
+/*eslint unicode-bom: ["error", "always"]*/
 // Summary And Greeting Section
 
 import emoji from "react-easy-emoji";

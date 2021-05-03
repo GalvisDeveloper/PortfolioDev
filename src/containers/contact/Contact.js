@@ -29,7 +29,7 @@ export default function Contact() {
                 isDark ? "dark-mode contact-text-div" : "contact-text-div"
               }
             >
-              <a className="contact-detail" href={"tel:" + contactInfo.number}>
+              <a className="contact-detail" href="https://api.whatsapp.com/send/?phone=573178064320&text&app_absent=0">
                 {contactInfo.number}
               </a>
               <br />
@@ -51,7 +51,7 @@ export default function Contact() {
             ) : (
               <img
                 alt="Man working"
-                src={require("../../assets/images/contactMailDark.svg")}
+                src={require("../../assets/images/adds/contactMailDark.svg")}
               ></img>
             )}
           </div>

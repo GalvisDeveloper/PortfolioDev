@@ -1,11 +1,12 @@
-﻿import React from "react";
+﻿/*eslint unicode-bom: ["error", "always"]*/
+import React from "react";
 import SocialMedia from "../../components/socialMedia/SocialMedia";
-import {contactInfo} from "../../portfolio";
+import { contactInfo } from "../../portfolio";
 import emoji from "react-easy-emoji";
-import {Fade} from "react-reveal";
+import { Fade } from "react-reveal";
 import "./GithubProfileCard.css";
 
-export default function GithubProfileCard({prof}) {
+export default function GithubProfileCard({ prof }) {
   if (prof.hireable !== null) {
     prof.hireable = "Yes";
   } else {

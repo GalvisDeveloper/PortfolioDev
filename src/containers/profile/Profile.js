@@ -1,5 +1,5 @@
-import React, { useState, useEffect, lazy, Suspense } from "react";
-import ApolloClient, { gql } from "apollo-boost";
+import React, { useState, lazy, Suspense } from "react";
+// import ApolloClient, { gql } from "apollo-boost";
 import { openSource } from "../../portfolio";
 import Contact from "../contact/Contact";
 import Loading from "../loading/Loading";
@@ -9,55 +9,54 @@ const GithubProfileCard = lazy(() =>
   import("../../components/githubProfileCard/GithubProfileCard")
 );
 export default function Profile() {
-  const [prof, setrepo] = useState([]);
-  function setProfileFunction(array) {
-    setrepo(array);
-  }
+  const [prof] = useState([]);
+  // function setProfileFunction(array) {
+  //   setrepo(array);
+  // }
 
+  // const getProfileData = () => {
+  //   const client = new ApolloClient({
+  //     uri: "https://api.github.com/graphql",
+  //     request: (operation) => {
+  //       operation.setContext({
+  //         headers: {
+  //           authorization: `Bearer ${openSource.githubConvertedToken}`,
+  //         },
+  //       });
+  //     },
+  //   });
 
-  const getProfileData = () => {
-    const client = new ApolloClient({
-      uri: "https://api.github.com/graphql",
-      request: operation => {
-        operation.setContext({
-          headers: {
-            authorization: `Bearer ${openSource.githubConvertedToken}`
-          }
-        });
-      }
-    });
-
-    client
-      .query({
-        query: gql`
-      {
-        user(login:"${openSource.githubUserName}") { 
-          name
-          bio
-          isHireable
-          avatarUrl
-          location
-        }
-    }
-      `
-      })
-      .then(result => {
-        setProfileFunction(result.data.user);
-      })
-      .catch(function (error) {
-        console.log(error);
-        setProfileFunction("Error");
-        console.log(
-          "Because of this Error Contact Section is Showed instead of Profile"
-        );
-        openSource.showGithubProfile = "false";
-      });
-  }
-  useEffect(() => {
-    if (openSource.showGithubProfile === "true") {
-      getProfileData();
-    }
-  }, []);
+  //   client
+  //     .query({
+  //       query: gql`
+  //     {
+  //       user(login:"${openSource.githubUserName}") {
+  //         name
+  //         bio
+  //         isHireable
+  //         avatarUrl
+  //         location
+  //       }
+  //   }
+  //     `,
+  //     })
+  //     .then((result) => {
+  //       setProfileFunction(result.data.user);
+  //     })
+  //     .catch(function (error) {
+  //       console.log(error);
+  //       setProfileFunction("Error");
+  //       console.log(
+  //         "Because of this Error Contact Section is Showed instead of Profile"
+  //       );
+  //       openSource.showGithubProfile = "false";
+  //     });
+  // };
+  // useEffect(() => {
+  //   if (openSource.showGithubProfile === "true") {
+  //     getProfileData();
+  //   }
+  // }, []);
   if (
     openSource.display &&
     openSource.showGithubProfile === "true" &&
