@@ -5,7 +5,7 @@
 import emoji from "react-easy-emoji";
 import ufpsLogo from "./assets/images/education/ufpslogo.png";
 import iGerenciaLogo from "./assets/images/jobs/iGerencia_logo.png";
-import escrutinioLogo from "./assets/images/jobs/logo_elecciones.png";
+// import escrutinioLogo from "./assets/images/jobs/logo_elecciones.png";
 import certifiedXResearch from "./assets/images/certifieds/certifiedXResearch.png";
 import certifiedEnglish from "./assets/images/certifieds/certifiedEnglish.png";
 import certifiedDigitalT from "./assets/images/certifieds/certifiedDigitalT.png";
@@ -171,14 +171,14 @@ const workExperiences = {
         "Creating reusables UI Components",
       ],
     },
-    {
-      role: "Support tech",
-      company: "Escrutinio 2019",
-      companylogo: escrutinioLogo,
-      date: "October 2019 – November 2019",
-      desc:
-        "I did technical support in the Colombian electoral systems of the year 2019",
-    },
+    // {
+    //   role: "Support tech",
+    //   company: "Escrutinio 2019",
+    //   companylogo: escrutinioLogo,
+    //   date: "October 2019 – November 2019",
+    //   desc:
+    //     "I did technical support in the Colombian electoral systems of the year 2019",
+    // },
   ],
 };
 
